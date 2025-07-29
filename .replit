@@ -1,0 +1,6 @@
+run = "bash launch.sh"
+language = "python"
+entrypoint = "streamer/working_dir/__main__.py"
+modules = ["python-3.11"]
+
+[nix]
