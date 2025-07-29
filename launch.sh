@@ -13,4 +13,6 @@ SCRIPT_DIR=$(cd $(dirname "$0") && pwd)
 $PYTHON "$SCRIPT_DIR/streamer/__main__.py" | tee logs.txt
 
 
-echo "✅ Bot exited. Check logs.txt for details."
+echo "🕒 Syncing time..."
+ntpdate -u time.cloudflare.com || echo "⚠️ Time sync failed"
+
